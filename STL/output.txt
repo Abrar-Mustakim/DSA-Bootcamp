@@ -1,0 +1,7 @@
+Size of Vector: 6
+Capacity of Vector: 8
+Front: 1
+Back: 6
+Back: 7
+Back: 6
+1 2 3 4 5 6 

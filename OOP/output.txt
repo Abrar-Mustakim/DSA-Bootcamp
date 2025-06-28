@@ -1,0 +1,15 @@
+Welcome!! I am the New Faculty!!
+Name of Teacher t1 is: Shraddha
+Salary of Teacher t1 is: 30000
+Welcome!! I am the New Faculty!!
+Department of Teacher 2 is: Computer Engineering
+Name: Babbar
+Department: Computer Engineering
+---------------------------------------------------
+I am a Custom Made Copy Constructor
+Name: Babbar
+Department: Computer Engineering
+---------------------------------------------------
+I am a Custom Made Copy Constructor
+Name: Babbar
+Department: Computer Engineering
