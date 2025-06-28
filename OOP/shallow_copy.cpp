@@ -23,6 +23,14 @@ public:
         *cgpaPtr = *(newObj.cgpaPtr);
     }
 
+    //destructor--> We need it to deallocate(delete) the memory that is dynamically
+    // allocated 
+
+    ~Student(){
+        cout << "I am Deleting this Memory"<<endl;
+        delete cgpaPtr;
+    }
+
     void getInfo(){
         cout << "Student Name: " << name << " and his CGPA: " << *cgpaPtr << endl;
     }
