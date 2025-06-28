@@ -93,5 +93,9 @@ int main(){
     Teacher t5(t4);
     t5.getInfo();
 
+    cout<<"---------------------------------------------------"<<endl;
+    Teacher t6(t6);
+    t6.getInfo();
+
     return 0;
 }
