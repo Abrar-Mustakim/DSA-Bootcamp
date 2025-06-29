@@ -11,7 +11,7 @@ public:
         this -> name = name;
         //allocate new dynamic memory to pointer
         cgpaPtr = new double;
-        *cgpaPtr = cgpa;
+        *cgpaPtr = cgpa; 
 
     }
 
@@ -28,7 +28,7 @@ public:
 
     ~Student(){
         cout << "I am Deleting this Memory"<<endl;
-        delete cgpaPtr;
+        delete cgpaPtr; //memory leak
     }
 
     void getInfo(){
