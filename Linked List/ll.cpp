@@ -111,6 +111,8 @@ public:
     }
 
 
+
+
 };
 
 
@@ -129,3 +131,213 @@ int main(){
     cout << "Found 3: "<<ll.search(3) << endl;
     return 0;
 }
+
+
+//leetcode 206
+//https://leetcode.com/problems/reverse-linked-list/
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+// class Solution {
+// public:
+//     ListNode* reverseList(ListNode* head) {
+
+//         ListNode* prevv=NULL;
+//         ListNode* curr=head;
+//         ListNode* nextt=NULL;
+//         while(curr!=NULL){
+//             nextt=curr->next;
+//             curr->next=prevv;
+//             prevv=curr;
+//             curr=nextt;
+//         }
+//         return prevv;
+        
+//     }
+// };
+
+
+
+//leetcode 876
+//https://leetcode.com/problems/middle-of-the-linked-list/description/
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+//  */
+// class Solution {
+// public:
+//     int count(ListNode* head){
+//         int counts=0;
+//         ListNode* temp=head;
+//         while(temp!=NULL){
+//             counts+=1;
+//             temp=temp->next;
+//         }
+//         return counts;
+//     }
+//     ListNode* middleNode(ListNode* head) {
+//         int size=count(head);
+//         int position=size/2;
+//         int i=0;
+//         ListNode* temp=head;
+//         while(i!=position){
+//             temp=temp->next;
+//             i+=1;
+//         }
+//         return temp;
+//     }
+// };
+
+//two pointer approach
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+// class Solution {
+// public:
+//     ListNode* middleNode(ListNode* head) {
+//         ListNode* fast=head;
+//         ListNode* slow=head;
+//         while(fast!=NULL && fast->next!=NULL){
+//             slow=slow->next;
+//             fast=fast->next->next;
+//         }
+//         return slow;
+        
+//     }
+// };
+
+
+
+//leetcode 141
+//https://leetcode.com/problems/linked-list-cycle/description/
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+// class Solution {
+// public:
+//     bool hasCycle(ListNode *head) {
+//         ListNode* slow=head;
+//         ListNode* fast=head;
+//         while(fast!=NULL && fast->next!=NULL){
+//             slow=slow->next;
+//             fast=fast->next->next;
+//             if(slow==fast){
+//                 return true;
+//             }
+//         }
+//         return false;
+//     }
+// };
+
+
+
+//leetcode 142
+//https://leetcode.com/problems/linked-list-cycle-ii/description/
+
+// /**
+//  * Definition for singly-linked list.
+//  * struct ListNode {
+//  *     int val;
+//  *     ListNode *next;
+//  *     ListNode(int x) : val(x), next(NULL) {}
+//  * };
+//  */
+// class Solution {
+// public:
+//     ListNode *detectCycle(ListNode *head) {
+//         ListNode* slow=head;
+//         ListNode* fast=head;
+//         bool isCycle=false;
+//         while(fast!=NULL and fast->next!=NULL){
+//             slow=slow->next;
+//             fast=fast->next->next;
+//             if(slow==fast){
+//                 isCycle=true;
+//                 break;
+//             }
+
+//         }
+//         if(!isCycle){
+//             return NULL;
+//         }
+//         slow=head;
+//         //ListNode* prev=NULL;
+//         while(slow!=fast){
+//             slow=slow->next;
+//             //prev=fast;
+//             fast=fast->next;
+//         }
+//         //prev.next=NULL;
+//         return slow;
+        
+
+        
+        
+//     }
+// };
+
+
+//leetcode 21
+//https://leetcode.com/problems/merge-two-sorted-lists/description/
+
+// /**
+//  * Definition for singly-linked list.
+//  * struct ListNode {
+//  *     int val;
+//  *     ListNode *next;
+//  *     ListNode() : val(0), next(nullptr) {}
+//  *     ListNode(int x) : val(x), next(nullptr) {}
+//  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+//  * };
+//  */
+// class Solution {
+// public:
+//     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+//         ListNode* dummy = new ListNode(0);
+//         ListNode* curr=dummy;
+
+//         while(list1!=NULL && list2!=NULL){
+//             if(list1->val > list2->val){
+//                 curr->next=list2;
+//                 list2=list2->next;
+//             }else{
+//                 curr->next=list1;
+//                 list1=list1->next;
+//             }
+//             curr=curr->next;            
+//         }
+//         if(list1){
+//             curr->next=list1;
+//         }else if(list2){
+//             curr->next=list2;
+//         }
+
+//         return dummy->next;
+        
+//     }
+// };
